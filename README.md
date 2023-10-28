@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/fNqyYCdM)
 1. შექმენით კომპონენტი student-management
    
 2. კომპონენტში დაამატეთ სტუდენტის დამატების ფორმა შემდეგი ველებით: სახელი, გვარი, პირადი ნომერი, მისამართი რომელლიც მოიცავს ქალაქს და ქუჩას, ენების სია, და ღილაკი შენახვა (გამოიყენეთ რეაქტიული ფორმები)
