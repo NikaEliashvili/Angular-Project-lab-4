@@ -1,0 +1,19 @@
+.added-student {
+    margin-top: -2rem;
+    padding: 1rem;
+    border-bottom: 2px solid rgb(218, 217, 247);
+}
+
+.added-student p {
+    color: rgb(50, 49, 57);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.added-student p span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(23, 23, 24);
+    margin-right: 0.3rem;
+}

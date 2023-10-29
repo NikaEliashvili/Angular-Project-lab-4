@@ -1,0 +1,83 @@
+<!-- student-management.component.html -->
+
+<div class="form-div">
+  <form [formGroup]="studentForm" class="form">
+    <h2 class="form-header">Add New Student</h2>
+    <div class="fields-containers">
+      <div class="fields-container">
+        <div class="input-field">
+          <label for="firstName">First Name:</label>
+          <input id="firstName" formControlName="firstName" />
+        </div>
+        <div class="input-field">
+          <label for="lastName">Last Name:</label>
+          <input id="lastName" formControlName="lastName" />
+        </div>
+        <div class="input-field">
+          <label for="personalNumber">Personal Number:</label>
+          <input id="personalNumber" formControlName="personalNumber" />
+        </div>
+      </div>
+      <div class="fields-container">
+        <div formGroupName="address">
+          <div class="input-field">
+            <label for="city">City:</label>
+            <input id="city" formControlName="city" />
+          </div>
+          <div class="input-field">
+            <label for="street">Street:</label>
+            <input id="street" formControlName="street" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fields-containers-language">
+      <div formArrayName="languages" class="fields-container-language">
+        <div
+          class="input-field"
+          *ngFor="let language of getLanguageControls(); let i = index"
+        >
+          <label for="language{{ i }}">Language:</label>
+          <div class="input-button-container">
+            <input [id]="'language' + i" [formControl]="language" />
+            <button
+              class="languages-button"
+              type="button"
+              (click)="removeLanguage(i)"
+            >
+              <img
+                class="remove-icon"
+                src="assets/icons/remove-icon.svg"
+                alt="-"
+              />
+              Remove
+            </button>
+          </div>
+        </div>
+        <button
+          class="languages-button addBtn"
+          type="button"
+          (click)="addLanguage()"
+        >
+          <img class="plus-icon" src="assets/icons/plus-icon.svg" alt="+" />
+          Add Language
+        </button>
+      </div>
+    </div>
+
+    <!-- Save button -->
+    <button class="button" type="button" (click)="addStudent()">Save</button>
+  </form>
+</div>
+
+<!--  -->
+
+<h2 *ngIf="students.length === 0" class="no-students">No Students Found...</h2>
+<div class="added-students">
+  <h2 *ngIf="students.length > 0">Added Students:</h2>
+
+  <app-student-item
+    *ngFor="let student of students"
+    [student]="student"
+  ></app-student-item>
+</div>

@@ -1,0 +1,24 @@
+<!-- student-item.component.html -->
+<div class="added-student">
+  <p>
+    <span> Full Name: </span>
+    {{ student.firstName }} {{ student.lastName }}
+  </p>
+
+  <p>
+    <span> Personal Number: </span>
+    {{ student.personalNumber }}
+  </p>
+  <p>
+    <span> City: </span>
+    {{ student.address.city }}
+  </p>
+  <p>
+    <span> Street: </span>
+    {{ student.address.street }}
+  </p>
+  <p>
+    <span> Languages: </span>
+    {{ student.languages.join(", ") }}
+  </p>
+</div>
